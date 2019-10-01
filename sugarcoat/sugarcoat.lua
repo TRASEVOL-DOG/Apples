@@ -182,7 +182,7 @@ love.quit = quit
 events.quit = quit
 
 
-if castle and not (castle.system.isRemoteServer and castle.system.isRemoteServer()) then
+if castle and not SUGAR_SERVER_MODE then
   local canvas
   function network.paused()
     canvas = love.graphics.getCanvas()
